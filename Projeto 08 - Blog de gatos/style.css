@@ -1,0 +1,190 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+:root {
+    font-size: 62.5%;
+    --color-base-blue: hsl(195, 91%, 25%);
+    font-family: 'Mulish', sans-serif;
+}
+
+html, body, input {
+    font-family: 'Mulish', sans-serif;
+}
+
+.container {
+    padding: 1.6rem 3.2rem;
+    margin: 0 auto;
+    background-color: var(--color-base-blue);
+}
+
+header {
+    display: flex;
+    align-items: center;
+    gap: 2.6rem;
+}
+
+header form {
+    flex: 1;
+}
+
+.input-wrapper label {
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+}
+
+.input-wrapper input {
+    width: 100%;
+    padding: 1.6rem;
+    border: 0;
+    border-radius: .6rem;
+    font-size: 1.6rem;
+    font-weight: 600;
+    background: rgba(255, 255, 255, 0.20);
+    color: white;
+}
+
+.input-wrapper input::placeholder {
+    color: white;
+    
+}
+
+.avatar {
+    width: 4.2rem;
+    height: 4.2rem;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+   
+}
+
+#app main #banner {
+    width: 100%; 
+    height: auto; 
+    max-width: 100%; 
+}
+
+.content {
+    padding: 0 2.6rem;
+}
+
+.related-articles {
+    padding: 0 2.6rem 2.6rem;
+}
+
+.related-articles img {
+    transition: transform 0.2s;
+}
+
+.related-articles img:hover {
+    transform: scale(1.1);
+}
+
+main .article .rate {
+    display: flex;
+    margin-top: 0.8rem; 
+    gap: 1.2rem;
+    
+}
+
+.rate #like:hover {
+    filter: hue-rotate(294deg);
+}
+
+.rate #dislike:hover {
+    filter: hue-rotate(175deg);
+}
+
+.title {
+    margin-top: 3.1rem; 
+}
+
+.article p {
+    margin-top: 3.1rem;
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 2.56rem;
+}
+
+.related-articles h1 {
+    margin-top: 3.4rem;
+}
+
+.related-articles .item  {
+    display: flex;
+    margin-top: 3.2rem;
+    gap: 15px;
+}
+
+.item img {
+    object-fit: cover;
+    border-radius: 5px;
+    display: block;
+}
+
+figcaption h2 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    line-height: 2.88rem;
+}
+
+figcaption p {
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 2.24rem;
+}
+
+
+footer p {
+    text-align: center;
+    padding: 1.6rem;
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: white;
+}
+
+@media (min-width: 1116px) {
+    .container {
+        padding:  1.2rem 11.2rem;
+    }
+
+    #banner {
+        border-radius: 5px;
+    }
+
+    main {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        margin: 0 10.9rem;
+        gap: 34px;
+        padding: 4.4rem 0;
+    }
+
+    .content {
+        padding: 0;
+    }
+    
+    .related-articles {
+        padding: 0;
+    }
+
+    main .article .content .title {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    main .related-articles h1 {
+        margin-top: 0;
+    }
+}
